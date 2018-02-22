@@ -1,6 +1,20 @@
-# DS\_Interview\_Question
+# 120 Data Science Interview Questions
 
-test
+## Contents
+
+* PREDICTIVE MODELING
+
+* PROGRAMMING
+
+* PROBABILITY
+
+* STATISTICAL INFERENCE
+
+* DATA ANALYSIS
+
+* PRODUCT METRICS
+
+* COMMUNICATION
 
 
 
