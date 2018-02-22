@@ -19,7 +19,6 @@ After solving this quadratic equation, we can get $p = 1\:or\:\frac{p_{0}}{p_{2}
 
 ## References
 
-* [Quora Discussion](https://www.quora.com/Bobo-the-amoeba-has-a-25-25-and-50-chance-of-producing-0-1-or-2-offspring-respectively-Each-of-Bobos-descendants-also-have-the-same-probabilities-What-is-the-probability-that-Bobos-lineage-dies-out)
-
+* 
 
 

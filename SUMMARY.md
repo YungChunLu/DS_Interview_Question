@@ -1,5 +1,5 @@
 # Summary
 
 * [Introduction](README.md)
-* Probability
+* [Probability](probability.md)
 
