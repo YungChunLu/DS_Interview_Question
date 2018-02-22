@@ -38,6 +38,8 @@ $$
 
 
 So, when $$n = k + 1$$
+
+
 $$
 \begin{alignedat}{0}
    q_{k+1} \\ 
@@ -65,6 +67,7 @@ Because $$0<p_{2}, q_{n}<1$$ and $$\lim_{n\to\infty} q_{n}=\frac{p_{0}}{p_{2}}$$
 ## References
 
 * [Quora Discussion](https://www.quora.com/Bobo-the-amoeba-has-a-25-25-and-50-chance-of-producing-0-1-or-2-offspring-respectively-Each-of-Bobos-descendants-also-have-the-same-probabilities-What-is-the-probability-that-Bobos-lineage-dies-out)
+* [How to prove monotone and bounded sequences](https://math.stackexchange.com/questions/491709/monotone-and-bounded-sequences-proof?newreg=e0308813d2a640009fa33e7ec72a1e08)
 
 
 
