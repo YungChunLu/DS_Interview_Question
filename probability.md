@@ -1,8 +1,3 @@
----
-plugins:
-  - mathjax
----
-
 # Q1
 
 Bobo the amoeba has a 25%, 25%, and 50% chance of producing 0, 1, or 2 offspring, respectively. Each of Bobo’s descendants also have the same probabilities. What is the probability that Bobo’s lineage dies out?
