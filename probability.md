@@ -38,10 +38,17 @@ $$
 
 
 So, when $$n = k + 1$$
-
-
 $$
-q_{k+1} = p_{0} + p_{1}q_{k} + p_{2}q_{k}^2
+\begin{alignedat}{0}
+   q_{k+1} \\ 
+   = p_{0} + p_{1}q_{k} + p_{2}q_{k}^2 \\ 
+   < p_{0} + p_{1} + p_{2}q_{k}^2 \\
+   = (1-p_{2}) + p_{2}q_{k}^2 \\
+   < (1-p_{2}) + \frac{p_{0}^2}{p_{2}} \\
+   = \frac{p_{0}^2}{p_{2}} - p_{0}^2 \\
+   < \frac{p_{0}^2}{p_{2}} \\
+   < \frac{p_{0}}{p_{2}}
+\end{alignedat}
 $$
 
 
@@ -58,4 +65,6 @@ Because $$0<p_{2}, q_{n}<1$$ and $$\lim_{n\to\infty} q_{n}=\frac{p_{0}}{p_{2}}$$
 ## References
 
 * [Quora Discussion](https://www.quora.com/Bobo-the-amoeba-has-a-25-25-and-50-chance-of-producing-0-1-or-2-offspring-respectively-Each-of-Bobos-descendants-also-have-the-same-probabilities-What-is-the-probability-that-Bobos-lineage-dies-out)
+
+
 
