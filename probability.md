@@ -1,3 +1,8 @@
+---
+plugins:
+  - mathjax
+---
+
 # Q1
 
 Bobo the amoeba has a 25%, 25%, and 50% chance of producing 0, 1, or 2 offspring, respectively. Each of Bobo’s descendants also have the same probabilities. What is the probability that Bobo’s lineage dies out?
@@ -27,12 +32,16 @@ For proving $$q_{n}$$ is bounded, let's start with n = 1
 $$
 q_{1} = p_{0} < \frac{p_{0}}{p_{2}}
 $$
+
+
 Let's assume, the sequence is bounded when $$n = k$$ , then we get
 
 
 $$
 q_{k} < \frac{p_{0}}{p_{2}}
 $$
+
+
 So, when $$n = k + 1$$
 
 
@@ -47,11 +56,11 @@ For proving $$q_{n}$$ is a monotonic sequence, let's start with
 $$
 q_{n+1} - q_{n} = p_{0}-(1-p_{1})q_{n}+p_{2}q_{n}^2 = p_{2}(1-q_{n})(\frac{p_{0}}{p_{2}}-q_{n})
 $$
+
+
 Because $$0<p_{2}, q_{n}<1$$ and $$\lim_{n\to\infty} q_{n}=\frac{p_{0}}{p_{2}}$$ , we can get $$q_{n+1} - q_{n}>0 => q_{n+1} > q_{n}$$
 
 ## References
 
 * [Quora Discussion](https://www.quora.com/Bobo-the-amoeba-has-a-25-25-and-50-chance-of-producing-0-1-or-2-offspring-respectively-Each-of-Bobos-descendants-also-have-the-same-probabilities-What-is-the-probability-that-Bobos-lineage-dies-out)
-
-
 
