@@ -6,6 +6,8 @@ Bobo the amoeba has a 25%, 25%, and 50% chance of producing 0, 1, or 2 offspring
 
 Let's denote the probabilities of having 0, 1, or 2 offspring are $p_{0}, p_{1}, p\_{2}$.
 
+$$p_{0}$$
+
 There are three options in which Bobo's lineage could die out.  
 1. If there is no offspring, the probaility of lineage dying out is **$p\_{0}$**  
 2. If there is one offspring, the probaility of lineage dying out is **$q$** which is contingent on having one offspring.  
