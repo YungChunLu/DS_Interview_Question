@@ -14,6 +14,8 @@ $$R^2$$ should be between 0 and 1.
 * When $$R^2$$ is 1, it represents that the model explains all of the variability of the response data around its mean
 
 The definition of$$R^2$$ is
+
+
 $$
 R^2 = \frac{\text{Explained variation}}{\text{Total variation}} = \frac{SS_{exp}}{SS_{total}} = \frac{SS_{total}-SS_{res}}{SS_{total}} = 1 - \frac{SS_{res}}{SS_{total}}
 $$
@@ -33,18 +35,26 @@ $$
 We should keep in mind that $$SS_{total} = SS_{exp} + SS_{res}$$ is only valid when the model is linear regression and has an intercept.
 
 Here is the proof,
+
+
 $$
 \displaystyle\sum_{i}(y_{i}-\overline{y})^2 = \displaystyle\sum_{i}(\hat{y}_{i}-\overline{y})^2 + \displaystyle\sum_{i}(y_{i}-\hat{y}_{i})^2 + 2\displaystyle\sum_{i}(\hat{y}_{i}-\overline{y})(y_{i}-\hat{y}_{i})
 $$
+
+
 Because the model is linear regression,
+
+
 $$
 \begin{gathered}
-\hat{y}_{i} = \hat{a} + \hat{b}x_{i} \\
-\overline{y}_{i} = \hat{a} + \hat{b}\overline{x}_{i}\\
-\hat{y}_{i} - \overline{y}_{i} = \hat{b}(x_{i} - \overline{x}_{i}) \\
-y_{i} - \hat{y}_{i} = (y_{i} - \overline{y}_{i}) - (\hat{y}_{i} - \overline{y}_{i}) = (y_{i} - \overline{y}_{i}) - \hat{b}(x_{i} - \overline{x}_{i})
+\hat{y}_{i} = a + bx_{i} \\
+\overline{y}_{i} = a + b\overline{x}_{i}\\
+\hat{y}_{i} - \overline{y}_{i} = b(x_{i} - \overline{x}_{i}) \\
+y_{i} - \hat{y}_{i} = (y_{i} - \overline{y}_{i}) - (\hat{y}_{i} - \overline{y}_{i}) = (y_{i} - \overline{y}_{i}) - b(x_{i} - \overline{x}_{i})
 \end{gathered}
 $$
+
+
 So, we can deduct the cross-term into
 
 
@@ -55,13 +65,19 @@ $$
 = 2\hat{b}(\displaystyle\sum_{i}(x_{i} - \overline{x}_{i})(y_{i} - \overline{y}_{i}) - \hat{b}\displaystyle\sum_{i}(x_{i} - \overline{x}_{i})^2)
 \end{alignedat}
 $$
+
+
 By minimizing the sum of squared errors, we can get
 
 
 $$
 \hat{b} = \frac{\displaystyle\sum_{i}(x_{i}-\overline{x})(y_{i}-\overline{y})}{\displaystyle\sum_{i}(x_{i}-\overline{x})^2}
 $$
+
+
 Therefore,
+
+
 $$
 \begin{alignedat}{4}
 2\displaystyle\sum_{i}(\hat{y}_{i}-\overline{y})(y_{i}-\hat{y}_{i}) \\
