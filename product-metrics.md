@@ -4,5 +4,7 @@ What would be good metrics of success for an advertising-driven consumer product
 
 ## Ans
 
+For advertising-driven consumer product, we can use 
+
 
 

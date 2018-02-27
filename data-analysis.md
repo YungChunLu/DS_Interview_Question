@@ -8,11 +8,14 @@ What is $$R^2$$ ? What are some other metrics that could be better than $$R^2$$ 
 
 To start, let's recap$$R^2$$ . It's a statistical measure of how close the data are to the fitted model. It's also known as the coefficient of determination.
 
+$$R^2$$ should be between 0 and 1.
+
+* When $$R^2$$ is 0, it represents that the model explains none of the variability of the response data around its mean
+* When $$R^2$$ is 1, it represents that the model explains all of the variability of the response data around its mean
+
 The definition of$$R^2$$ is
-
-
 $$
-R^2 = \frac{\text{Explained variation}}{\text{Total variation}} = 1 - \frac{\text{Residual variation}}{\text{Total variation}} = 1 - \frac{SS_{res}}{SS_{total}}
+R^2 = \frac{\text{Explained variation}}{\text{Total variation}} = \frac{SS_{exp}}{SS_{total}} = \frac{SS_{total}-SS_{res}}{SS_{total}} = 1 - \frac{SS_{res}}{SS_{total}}
 $$
 
 
@@ -20,20 +23,59 @@ $$
 $$
 \begin{alignedat}{3}
 SS_{total} = \text{Total variation} = \displaystyle\sum_{i}(y_{i}-\overline{y})^2 \\
-SS_{exp} = \text{Explained variation} = \displaystyle\sum_{i}(f_{i}-\overline{y})^2 \\
-SS_{res} = \text{Residual variation} = \displaystyle\sum_{i}(y_{i}-f_{i})^2 \\
+SS_{exp} = \text{Explained variation} = \displaystyle\sum_{i}(\hat{y}_{i}-\overline{y})^2 \\
+SS_{res} = \text{Residual variation} = \displaystyle\sum_{i}(y_{i}-\hat{y}
+_{i})^2 \\
 \end{alignedat}
 $$
 
 
-$$R^2$$ should be between 0 and 1.
+We should keep in mind that $$SS_{total} = SS_{exp} + SS_{res}$$ is only valid when the model is linear regression and has an intercept.
 
-* When $$R^2$$ is 0, it represents that the model explains none of the variability of the response data around its mean
-* When $$R^2$$ is 1, it represents that the model explains all of the variability of the response data around its mean
+Here is the proof,
+$$
+\displaystyle\sum_{i}(y_{i}-\overline{y})^2 = \displaystyle\sum_{i}(\hat{y}_{i}-\overline{y})^2 + \displaystyle\sum_{i}(y_{i}-\hat{y}_{i})^2 + 2\displaystyle\sum_{i}(\hat{y}_{i}-\overline{y})(y_{i}-\hat{y}_{i})
+$$
+Because the model is linear regression,
+$$
+\begin{gathered}
+\hat{y}_{i} = \hat{a} + \hat{b}x_{i} \\
+\overline{y}_{i} = \hat{a} + \hat{b}\overline{x}_{i}\\
+\hat{y}_{i} - \overline{y}_{i} = \hat{b}(x_{i} - \overline{x}_{i}) \\
+y_{i} - \hat{y}_{i} = (y_{i} - \overline{y}_{i}) - (\hat{y}_{i} - \overline{y}_{i}) = (y_{i} - \overline{y}_{i}) - \hat{b}(x_{i} - \overline{x}_{i})
+\end{gathered}
+$$
+So, we can deduct the cross-term into
+
+
+$$
+\begin{alignedat}{3}
+2\displaystyle\sum_{i}(\hat{y}_{i}-\overline{y})(y_{i}-\hat{y}_{i}) = 2\hat{b}\displaystyle\sum_{i}(x_{i} - \overline{x}_{i})((y_{i} - \overline{y}_{i}) - \hat{b}(x_{i} - \overline{x}_{i})) \\
+= 2\hat{b}(\displaystyle\sum_{i}(x_{i} - \overline{x}_{i})(y_{i} - \overline{y}_{i}) - \hat{b}(x_{i} - \overline{x}_{i})^2) \\
+= 2\hat{b}(\displaystyle\sum_{i}(x_{i} - \overline{x}_{i})(y_{i} - \overline{y}_{i}) - \hat{b}\displaystyle\sum_{i}(x_{i} - \overline{x}_{i})^2)
+\end{alignedat}
+$$
+By minimizing the sum of squared errors, we can get
+
+
+$$
+\hat{b} = \frac{\displaystyle\sum_{i}(x_{i}-\overline{x})(y_{i}-\overline{y})}{\displaystyle\sum_{i}(x_{i}-\overline{x})^2}
+$$
+Therefore,
+$$
+\begin{alignedat}{4}
+2\displaystyle\sum_{i}(\hat{y}_{i}-\overline{y})(y_{i}-\hat{y}_{i}) \\
+= 2\hat{b}(\displaystyle\sum_{i}(x_{i} - \overline{x}_{i})(y_{i} - \overline{y}_{i}) - \hat{b}\displaystyle\sum_{i}(x_{i} - \overline{x}_{i})^2) \\
+= 2\hat{b}(\displaystyle\sum_{i}(x_{i} - \overline{x}_{i})(y_{i} - \overline{y}_{i}) - \displaystyle\sum_{i}(x_{i} - \overline{x}_{i})(y_{i} - \overline{y}_{i})) \\
+= 0
+\end{alignedat}
+$$
+
 
 ## Reference
 
 * [Blog by Jim Frost](http://blog.minitab.com/blog/adventures-in-statistics-2/regression-analysis-how-do-i-interpret-r-squared-and-assess-the-goodness-of-fit)
+* Proof of e
 
 
 
