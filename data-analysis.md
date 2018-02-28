@@ -20,6 +20,12 @@ Following are the drawbacks of $$R^2$$:
 * $$R^2$$ does not indicate whether a regression model is adequate. You can have a low R-squared value for a good model \(which have statistical importance on the coefficient\), or a high R-squared value for a model that does not fit the data.
 * $$R^2$$ can not determine whether the coefficient estimates and predictions are biased, which is why we must assess the residual plots.
 
+Other metrics that could be used on model selection:
+
+* Adjusted $$R^2$$ : It penalized a complex model, which contains more variables in the model
+* AIC:
+* BIC: 
+
 The definition of$$R^2$$ is
 
 
