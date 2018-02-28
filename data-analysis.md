@@ -6,12 +6,19 @@ What is $$R^2$$ ? What are some other metrics that could be better than $$R^2$$ 
 
 ## Ans
 
-To start, let's recap$$R^2$$ . It's a statistical measure of how close the data are to the fitted model. It's also known as the coefficient of determination.
+To start, let's recap$$R^2$$. It's a statistical measure of how close the data are to the fitted model. It's also known as the coefficient of determination.
 
 $$R^2$$ should be between 0 and 1.
 
 * When $$R^2$$ is 0, it represents that the model explains none of the variability of the response data around its mean
 * When $$R^2$$ is 1, it represents that the model explains all of the variability of the response data around its mean
+
+Following are the drawbacks of $$R^2$$:
+
+* It's only useful for linear regression because $$R^2$$ will not between 0 and 1 when the model is not linear.
+* $$R^2$$ will be a biased estimate based on the sample
+* $$R^2$$ does not indicate whether a regression model is adequate. You can have a low R-squared value for a good model \(which have statistical importance on the coefficient\), or a high R-squared value for a model that does not fit the data.
+* $$R^2$$ can not determine whether the coefficient estimates and predictions are biased, which is why we must assess the residual plots.
 
 The definition of$$R^2$$ is
 
@@ -91,7 +98,10 @@ $$
 ## Reference
 
 * [Blog by Jim Frost](http://blog.minitab.com/blog/adventures-in-statistics-2/regression-analysis-how-do-i-interpret-r-squared-and-assess-the-goodness-of-fit)
-* Proof of e
+* [Proof of the equation](https://en.wikipedia.org/wiki/Explained_sum_of_squares#cite_note-Mendenhall-1)
+* [Derivation of linear regression](https://en.wikipedia.org/wiki/Simple_linear_regression)
+* [Derivation of least squares](https://en.wikipedia.org/wiki/Proofs_involving_ordinary_least_squares)
+* [Why $$R^2$$ is problematic](http://blog.minitab.com/blog/adventures-in-statistics-2/five-reasons-why-your-r-squared-can-be-too-high)
 
 
 
