@@ -90,13 +90,19 @@ In any 15-minute interval, there is a 20% probability that you will see at least
 
 * Basic probability theory
 
-Assuming the pattern of shooting stat is independent and identical at each interval. 
+Assuming the pattern of shooting stat is independent and identical at each interval.
 
 From the question, we can get the probability of no shooting star
+
+
 $$
 P(star = 0) = 1 - P(star \geq 1) = 1 - 0.2 = 0.8
 $$
-Then, the probability of seeing at least one shooting star in the period of an hour is 
+
+
+Then, the probability of seeing at least one shooting star in the period of an hour is
+
+
 $$
 P(star \geq 1) = 1 - P^4(star = 0) = 1 - (0.8)^4 = 0.5904
 $$
@@ -107,10 +113,16 @@ $$
 The number of shooting stars in a 15-minute interval follows a Poisson distribution with rate $$15\lambda$$.
 
 So, the probability of no shooting star in a 15-minute interval
+
+
 $$
 P(star = 0) = e^{-15\lambda} = 1 - P(star \geq 1) = 1 - 0.2 = 0.8
 $$
+
+
 Therefore, the probability of no shooting star in a 60-minute interval
+
+
 $$
 P(star \geq 1) = 1 - P(star = 0) = 1 - e^{-60\lambda} = 1 - (e^{-15\lambda})^4 = 1 - (0.8)^4 = 0.5904
 $$
@@ -119,6 +131,7 @@ $$
 ## References
 
 * [Quora Discussion](https://www.quora.com/In-any-15-minute-interval-there-is-a-20-probability-that-you-will-see-at-least-one-shooting-star-What-is-the-probability-that-you-see-at-least-one-shooting-star-in-the-period-of-an-hour)
+* [Poisson distribution explanation](http://www.stat.wisc.edu/~wardrop/courses/301chapter4)
 
 
 
