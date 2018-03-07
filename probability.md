@@ -133,5 +133,23 @@ $$
 * [Quora Discussion](https://www.quora.com/In-any-15-minute-interval-there-is-a-20-probability-that-you-will-see-at-least-one-shooting-star-What-is-the-probability-that-you-see-at-least-one-shooting-star-in-the-period-of-an-hour)
 * [Poisson distribution explanation](http://www.stat.wisc.edu/~wardrop/courses/301chapter4)
 
+---
+
+# Q3
+
+How can you generate a random number between 1 and 7 with only a die?
+
+## Ans
+
+1. Roll the dice twice
+2. Multiply the first roll by 6 and add the second
+3. Keep doing the above two steps until the result is not 36
+
+The reason is that we can evenly divide the 35 possible outcomes by 7. And because the die is fair, we can get equal probability between each group.  
+
+## References
+
+* [Quora Discussion](https://www.quora.com/How-can-you-generate-a-random-number-between-1-7-with-only-a-die-1)
+
 
 
