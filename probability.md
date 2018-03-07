@@ -145,11 +145,27 @@ How can you generate a random number between 1 and 7 with only a die?
 2. Multiply the first roll by 6 and add the second
 3. Keep doing the above two steps until the result is not 36
 
-The reason is that we can evenly divide the 35 possible outcomes by 7. And because the die is fair, we can get equal probability between each group.  
+The reason is that we can evenly divide the 35 possible outcomes by 7. And because the die is fair, we can get equal probability between each group.
 
 ## References
 
 * [Quora Discussion](https://www.quora.com/How-can-you-generate-a-random-number-between-1-7-with-only-a-die-1)
+
+---
+
+# Q4
+
+How can you get a fair coin toss if someone hands you a coin that is weighted to come up heads more often than tails?
+
+## Ans
+
+1. Toss the coin twice
+2. If head first and tail second, consider the result as head, or tail first and head second, consider result as tail.
+3. Otherwise, keep tossing the coin twice until the result is valid
+
+## References
+
+* [Complete Analysis Paper](http://web.eecs.umich.edu/~qstout/abs/AnnProb84.html)
 
 
 
