@@ -167,5 +167,23 @@ How can you get a fair coin toss if someone hands you a coin that is weighted to
 
 * [Complete Analysis Paper](http://web.eecs.umich.edu/~qstout/abs/AnnProb84.html)
 
+---
+
+# Q5
+
+You have an 50-50 mixture of two normal distributions with the same standard deviation. How far apart do the means need to be in order for this distribution to be bi- modal?
+
+## Ans
+
+The answer is $$|\mu1−\mu2|>2\sigma$$
+
+Proof:
+
+TBD
+
+## References
+
+* [Quora Discussion](https://www.quora.com/You-have-an-50-50-mixture-of-two-normal-distributions-with-the-same-standard-deviation-How-far-apart-do-the-means-need-to-be-in-order-for-this-distribution-to-be-bimodal-Why)
+
 
 
