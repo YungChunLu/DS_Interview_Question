@@ -171,7 +171,7 @@ How can you get a fair coin toss if someone hands you a coin that is weighted to
 
 # Q5
 
-You have an 50-50 mixture of two normal distributions with the same standard deviation. How far apart do the means need to be in order for this distribution to be bi- modal?
+You have an 50-50 mixture of two normal distributions with the same standard deviation. How far apart do the means need to be in order for this distribution to be bi-modal?
 
 ## Ans
 
@@ -179,7 +179,33 @@ The answer is $$|\mu1−\mu2|>2\sigma$$
 
 Proof:
 
-TBD
+**We should prove one thing, there must be more than one point of x which can make the first derivative be 0.**
+
+The probability of x in the mixture of two normal distribution is
+$$
+\begin{aligned}
+   p(x)&=0.5N(x;μ1,σ)+0.5N(x;μ2,σ)\\
+   &=\frac{1}{2\sqrt{2\pi}\sigma}\exp^{\frac{-(x - \mu1)^2}{2\sigma^2}}+\frac{1}{2\sqrt{2\pi}\sigma}\exp^{\frac{-(x - \mu2)^2}{2\sigma^2}}
+\end{aligned}
+$$
+Then the first derivative is 
+$$
+p'(x) = \frac{-(x - \mu1)}{2\sqrt{2\pi}\sigma^3}\exp^{\frac{-(x - \mu1)^2}{2\sigma^2}}+\frac{-(x - \mu2)}{2\sqrt{2\pi}\sigma^3}\exp^{\frac{-(x - \mu2)^2}{2\sigma^2}}
+$$
+Set $$y = \frac{1}{\sigma}(x-(\frac{\mu1+\mu2}{2}))$$
+$$
+p'(y) = \frac{-(y + (\frac{\mu2-\mu1}{2\sigma}))}{2\sqrt{2\pi}\sigma^2}\exp^{\frac{-1}{2}(y + (\frac{\mu2-\mu1}{2\sigma}))^2}+\frac{-(y - (\frac{\mu2-\mu1}{2\sigma}))}{2\sqrt{2\pi}\sigma^2}\exp^{\frac{-1}{2}(y - (\frac{\mu2-\mu1}{2\sigma}))^2}
+$$
+Because this continuous density function is symmetric, we can easily find that the first derivative is 0 at $$y = 0$$, which means that  $$x = \frac{\mu1+\mu2}{2}$$
+
+If we want to make this distribution become bi-model, this distribution must satisfy 
+$$
+\begin{cases}
+   p'(y) > 0 &\text{if } 0 < y < \frac{\mu2-\mu1}{2\sigma}\\
+   p'(y) < 0 &\text{if } \frac{\mu1-\mu2}{2\sigma} < y < 0
+\end{cases}
+$$
+
 
 ## References
 
