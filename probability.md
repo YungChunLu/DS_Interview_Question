@@ -179,31 +179,52 @@ The answer is $$|\mu1−\mu2|>2\sigma$$
 
 Proof:
 
-**We should prove one thing, there must be more than one point of x which can make the first derivative be 0.**
+**We should only prove one thing, the second derivative at the middle of the two means must be larger than 0 because the middle of the two means must have lower value than the two means.**
 
 The probability of x in the mixture of two normal distribution is
+
+
 $$
 \begin{aligned}
    p(x)&=0.5N(x;μ1,σ)+0.5N(x;μ2,σ)\\
    &=\frac{1}{2\sqrt{2\pi}\sigma}\exp^{\frac{-(x - \mu1)^2}{2\sigma^2}}+\frac{1}{2\sqrt{2\pi}\sigma}\exp^{\frac{-(x - \mu2)^2}{2\sigma^2}}
 \end{aligned}
 $$
-Then the first derivative is 
-$$
-p'(x) = \frac{-(x - \mu1)}{2\sqrt{2\pi}\sigma^3}\exp^{\frac{-(x - \mu1)^2}{2\sigma^2}}+\frac{-(x - \mu2)}{2\sqrt{2\pi}\sigma^3}\exp^{\frac{-(x - \mu2)^2}{2\sigma^2}}
-$$
-Set $$y = \frac{1}{\sigma}(x-(\frac{\mu1+\mu2}{2}))$$
-$$
-p'(y) = \frac{-(y + (\frac{\mu2-\mu1}{2\sigma}))}{2\sqrt{2\pi}\sigma^2}\exp^{\frac{-1}{2}(y + (\frac{\mu2-\mu1}{2\sigma}))^2}+\frac{-(y - (\frac{\mu2-\mu1}{2\sigma}))}{2\sqrt{2\pi}\sigma^2}\exp^{\frac{-1}{2}(y - (\frac{\mu2-\mu1}{2\sigma}))^2}
-$$
-Because this continuous density function is symmetric, we can easily find that the first derivative is 0 at $$y = 0$$, which means that  $$x = \frac{\mu1+\mu2}{2}$$
 
-If we want to make this distribution become bi-model, this distribution must satisfy 
+
+Set $$A = \frac{\mu2 - \mu1}{2\sigma}, y = \frac{1}{\sigma}(x-(\frac{\mu1+\mu2}{2}))$$ , then the second derivative is
+
+
 $$
-\begin{cases}
-   p'(y) > 0 &\text{if } 0 < y < \frac{\mu2-\mu1}{2\sigma}\\
-   p'(y) < 0 &\text{if } \frac{\mu1-\mu2}{2\sigma} < y < 0
-\end{cases}
+p''(y) = \frac{-1}{2\sqrt{2\pi}\sigma^3}[(1 - (y + A)^2)\exp^{\frac{-(y + A)^2}{2}} + (1 - (y - A)^2)\exp^{\frac{-(y - A)^2}{2}}]
+$$
+
+
+If we want to make this distribution become bi-model, this distribution must satisfy
+
+
+$$
+p''(y) > 0 \text{ when } y = 0
+$$
+
+
+So,
+
+
+$$
+(1 - A^2)\exp^{\frac{-A^2}{2}} + (1 - A^2)\exp^{\frac{-A^2}{2}} < 0
+$$
+
+$$
+A^2 > 1
+$$
+Then
+$$
+\frac{|\mu1 - \mu2|}{2\sigma} > 1 
+$$
+
+$$
+|\mu1 - \mu2| > 2\sigma
 $$
 
 
