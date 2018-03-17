@@ -215,13 +215,21 @@ $$
 (1 - A^2)\exp^{\frac{-A^2}{2}} + (1 - A^2)\exp^{\frac{-A^2}{2}} < 0
 $$
 
+
+
 $$
 A^2 > 1
 $$
+
+
 Then
+
+
 $$
-\frac{|\mu1 - \mu2|}{2\sigma} > 1 
+\frac{|\mu1 - \mu2|}{2\sigma} > 1
 $$
+
+
 
 $$
 |\mu1 - \mu2| > 2\sigma
