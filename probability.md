@@ -234,7 +234,9 @@ $$
 $$
 |\mu1 - \mu2| > 2\sigma
 $$
+One more thing need to be considered is that $$p''(0) = 0 \text{ when }A = 1$$
 
+**Because we can get **$$p'''(0) = 0, p''''(0) < 0 \text{ when }A = 1$$**, it shows that **$$p''(y) < 0 \text{ when y is around 0}$$
 
 ## References
 
