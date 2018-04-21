@@ -2,6 +2,8 @@
 
 ## Contents
 
+* Notes
+
 * PREDICTIVE MODELING
 
 * PROGRAMMING
