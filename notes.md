@@ -10,5 +10,9 @@
 
 * [A Beginner’s Guide to Eigenvectors, PCA, Covariance and Entropy](https://deeplearning4j.org/eigenvector)
 
+## Applied Machine Learning
+
+* [About Feature Scaling and Normalization](http://sebastianraschka.com/Articles/2014_about_feature_scaling.html)
+
 
 
