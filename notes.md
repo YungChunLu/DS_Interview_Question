@@ -6,5 +6,9 @@
   * Bagging takes independent/parallel approach, but Boosting takes a sequential approach.
   * [Boosting tries to reduce bias, but Bagging tries to reduce variance](https://www.zhihu.com/question/26760839)
 
+## Applied Mathematics
+
+* [A Beginner’s Guide to Eigenvectors, PCA, Covariance and Entropy](https://deeplearning4j.org/eigenvector)
+
 
 
